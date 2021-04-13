@@ -1,4 +1,4 @@
-console.log("Test message: If youre seeing this everythings okay");
+console.log("Test message: Test Message");
 
 function computerPlay() {
     const randomNumber = (Math.floor(Math.random() * 3));
@@ -15,5 +15,41 @@ function computerPlay() {
  }
 }
 
-function playerSelection() {
-}
+const computerSelection = computerPlay();
+const playerSelection = 'Paper';
+
+function playRound(playerSelection, computerSelection) {
+    if(computerSelection==='Rock') {
+     if(playerSelection==='Rock') {
+           return 'Rock and Rock, its a tie!'
+        }
+     if(playerSelection==='Paper') {
+         return 'Rock beats Paper, sorry bud!'
+     }   
+     if(playerSelection==='Scissors') {
+         return 'Scissors beats Paper, congrats!'
+     }
+    }
+    if(computerSelection==='Paper') {
+        if(playerSelection==='Rock') {
+            return 'Paper beats Rock, sorry bud!'
+        }
+        if(playerSelection==='Paper') {
+            return 'Paper and Paper, its a tie!'
+        }
+        if(playerSelection==='Scissors') {
+            return 'Scissors beats Paper, congrats!'
+        }
+    }
+     if(computerSelection==='Scissors') {
+        if(playerSelection==='Rock') {
+            return 'Rock beats Scissors, congrats!'
+        }
+        if(playerSelection==='Paper') {
+            return 'Scissors beats Paper, sorry bud!'
+        }
+        if(playerSelection==='Scissors') {
+            return 'Scissors and Scissors, its a tie!'
+        }
+     }    
+    }
