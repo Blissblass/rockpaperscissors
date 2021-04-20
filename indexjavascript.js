@@ -17,17 +17,21 @@ function computerPlay() {
 
 let playerScore = 0;
 let computerScore = 0;
-const computerSelection = computerPlay();
+let computerSelection = computerPlay();
 const playerSelection = prompt("Please choose Rock, Paper or Scissors");
 function game() {
     playRound(playerSelection, computerSelection)
     console.log(playRound(playerSelection, computerSelection));
+    computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
     console.log(playRound(playerSelection, computerSelection));
+    computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
     console.log(playRound(playerSelection, computerSelection));
+    computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
     console.log(playRound(playerSelection, computerSelection));
+    computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
     console.log(playRound(playerSelection, computerSelection));
    
@@ -53,11 +57,11 @@ function game() {
      if(playerSelection==='Rock') {
            return 'Rock and Rock, its a tie!'
         }
-     if(playerSelection==='Paper') {
+     else if(playerSelection==='Paper') {
          computerScore++;
          return 'Rock beats Paper, sorry bud!'
      }   
-     if(playerSelection==='Scissors') {
+     else if(playerSelection==='Scissors') {
          playerScore++;
          return 'Scissors beats Paper, congrats!'
      }
@@ -70,10 +74,10 @@ function game() {
             computerScore++;
             return 'Paper beats Rock, sorry bud!'
         }
-        if(playerSelection==='Paper') {
+        else if(playerSelection==='Paper') {
             return 'Paper and Paper, its a tie!'
         }
-        if(playerSelection==='Scissors') {
+        else if(playerSelection==='Scissors') {
             playerScore++;
             return 'Scissors beats Paper, congrats!'
         }
@@ -86,11 +90,11 @@ function game() {
             playerScore++;
             return 'Rock beats Scissors, congrats!'
         }
-        if(playerSelection==='Paper') {
+        else if(playerSelection==='Paper') {
             computerScore++;
             return 'Scissors beats Paper, sorry bud!'
         }
-        if(playerSelection==='Scissors') {
+        else if(playerSelection==='Scissors') {
             return 'Scissors and Scissors, its a tie!'
         }
         else {
