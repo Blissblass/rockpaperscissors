@@ -107,3 +107,4 @@ checkScore();
             playerScore = 0
         }
 }
+
