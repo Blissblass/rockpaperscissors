@@ -51,10 +51,15 @@ div#instructions {
     border: none;
 }
 
+.btn:hover {
+    box-shadow: 1px 1px 15px rgb(15, 15, 15);
+}
+
 .btn:active {
-    box-shadow: inset 0px 0px 5px black, 1px 1px black;
+    box-shadow: inset 0px 0px 5px black, 1px 1px 3px black;
     font-size: 20px;
 }
+
 
 #output {
     font-size: 30px;
@@ -77,4 +82,27 @@ div#instructions {
 
 div#container {
     margin-top: 20px;
+}
+
+button#secret-btn { 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    outline: none;
+    border: none;
+}
+
+#secret-btn:focus {
+    outline: none;
+}
+
+img, h3 {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    display: none;
+}
+
+.display {
+    display: block;
 }

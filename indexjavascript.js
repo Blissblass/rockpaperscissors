@@ -1,6 +1,15 @@
 // This is a test message to check that the page has loaded the JS file correctly
 console.log("Test message: JScript file loaded!");
 
+posmBtn = document.querySelector('#secret-btn');
+posm = document.querySelector('#posum')
+posmText = document.querySelector('#posum-text');
+
+posmBtn.addEventListener('click', () => {
+    posm.classList.toggle('display');
+    posmText.classList.toggle('display');
+});
+
 // I assign the default player scores here to get incremented later on
 let playerScore = 0;
 let computerScore = 0;
